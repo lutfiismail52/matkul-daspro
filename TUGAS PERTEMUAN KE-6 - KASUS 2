@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int kapasitasTangki = 50; // liter
+    int konsumsiBahanBakarPerSatuLiter = 15; // km
+    int jarakYangDiTempuh = 1000; // km
+    int jarakTempuhPerFullTank;
+    
+    for(kapasitasTangki; kapasitasTangki >= 0; kapasitasTangki--) {
+        jarakTempuhPerFullTank = konsumsiBahanBakarPerSatuLiter * kapasitasTangki;
+        
+        cout << "Sisa bahan bakar: " << kapasitasTangki << " liter" << " jarak tempuh: " << jarakTempuhPerFullTank << " km" << endl;
+        
+        jarakTempuhPerFullTank -= konsumsiBahanBakarPerSatuLiter;
+        
+        if(kapasitasTangki == 0) {
+            cout << "Saatnya mengisi ulang bahan bakar!";
+        }
+    }
+    
+    cout << endl;
+    cout << endl;
+        cout << "Untuk menempuh jarak 1000 km diperlukan mengisi bahan bakar sebanyak 2x. Pertama saat sebelum berangkat, dan kedua setelah bahan bakar habis setelah melakukan perjalanan 750 km." << endl;
+        cout << "Nama: Lutfi Ismail Aliansah Putra" << endl;
+        cout << "NIM: 10224004" << endl;
+
+    return 0;
+}
